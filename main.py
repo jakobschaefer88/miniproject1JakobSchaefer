@@ -15,6 +15,8 @@ By signing this statement, I acknowledge my commitment to upholding the principl
 import yfinance as yf
 import pprint
 from datetime import datetime, timedelta
+import numpy as np
+import matplotlib.pyplot as plt
 
 # Get today's date
 today = datetime.today()
@@ -29,7 +31,13 @@ myTickers.sort()
 for ticker in myTickers:
     result = yf.Ticker(ticker)
     hist = result.history(start=ten_days_ago, end=today)
-    print(hist)
+
+    last10Days = []
+    for date in hist['Close'][:11]:
+        last10Days.append(date)
+    print(last10Days)
+    myarray = np.array(last10Days)
+    pprint.pprint(myarray)
 
 
 # get all stock info
