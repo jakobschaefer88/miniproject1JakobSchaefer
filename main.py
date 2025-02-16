@@ -14,6 +14,13 @@ By signing this statement, I acknowledge my commitment to upholding the principl
 
 import yfinance as yf
 import pprint
+from datetime import datetime, timedelta
+
+# Get today's date
+today = datetime.today()
+
+# Subtract 10 days
+ten_days_ago = today - timedelta(days=15)
 
 myTickers = ["WMT", "AAPL", "GDDY", "F", "WEN"]
 myData = {}
@@ -21,13 +28,10 @@ myData = {}
 myTickers.sort()
 for ticker in myTickers:
     result = yf.Ticker(ticker)
-    myData[ticker] = {'ticker': ticker,
-                      'dailyHigh': result.info['dayHigh']
-                     }
-    #pprint.pprint(myData)
-    #print(f"Ticker: {ticker} \tDaily High: {result.info['dayHigh']}")
+    hist = result.history(start=ten_days_ago, end=today)
+    print(hist)
 
-pprint.pprint(myData)
+
 # get all stock info
 #pprint.pprint(wmt.info)
 
