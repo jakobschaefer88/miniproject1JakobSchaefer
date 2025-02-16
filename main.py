@@ -25,7 +25,7 @@ os.makedirs("charts", exist_ok=True)
 #sets today as today's date
 today = datetime.today()
 
-#sets the last 10 business days from todays date,
+#sets the last 10 business days from today's date,
 ten_days_ago = today - timedelta(days=15)
 
 #my favorite Tickets
