@@ -11,3 +11,26 @@ By signing this statement, I acknowledge my commitment to upholding the principl
 ### INF601 - Advanced Programming in Python
 ### Jakob Schaefer
 ### Mini Project 1
+
+import yfinance as yf
+import pprint
+
+myTickers = ["WMT", "AAPL", "GDDY", "F", "WEN"]
+myData = {}
+
+myTickers.sort()
+for ticker in myTickers:
+    result = yf.Ticker(ticker)
+    myData[ticker] = {'ticker': ticker,
+                      'dailyHigh': result.info['dayHigh']
+                     }
+    #pprint.pprint(myData)
+    #print(f"Ticker: {ticker} \tDaily High: {result.info['dayHigh']}")
+
+pprint.pprint(myData)
+# get all stock info
+#pprint.pprint(wmt.info)
+
+# get historical market data
+#hist = msft.history(period="1mo")
+#pprint.pprint(hist)
