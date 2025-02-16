@@ -36,5 +36,7 @@ ex. Jakob Schaefer
 ## Acknowledgments
 
 Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
+* [yfinance](https://pypi.org/project/yfinance/0.2.43/)
+* [matplotlib](https://matplotlib.org/stable/tutorials/pyplot.html)
+* [chatGPT](https://chatgpt.com/share/67b25ddb-acbc-8002-86c8-a2b7ab259112)
+* 
