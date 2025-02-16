@@ -29,7 +29,7 @@ This should create 5 graphs in charts/ for each of the five stocks.
 
 ## Authors
 
-Contributors names anc contact info
+Contributors names and contact info
 
 ex. Jakob Schaefer
 
@@ -39,4 +39,4 @@ Inspiration, code snippets, etc.
 * [yfinance](https://pypi.org/project/yfinance/0.2.43/)
 * [matplotlib](https://matplotlib.org/stable/tutorials/pyplot.html)
 * [chatGPT](https://chatgpt.com/share/67b25ddb-acbc-8002-86c8-a2b7ab259112)
-* 
+
