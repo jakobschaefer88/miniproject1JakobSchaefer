@@ -17,6 +17,10 @@ import pprint
 from datetime import datetime, timedelta
 import numpy as np
 import matplotlib.pyplot as plt
+import copy
+import os
+
+os.makedirs("charts", exist_ok=True)
 
 # Get today's date
 today = datetime.today()
