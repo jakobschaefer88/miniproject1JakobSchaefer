@@ -35,9 +35,18 @@ for ticker in myTickers:
     last10Days = []
     for date in hist['Close'][:11]:
         last10Days.append(date)
-    print(last10Days)
-    myarray = np.array(last10Days)
-    pprint.pprint(myarray)
+    if len(last10Days) ==10:
+        myarray = np.array(last10Days)
+        maxPrice = myarray.max() + (myarray.max() * .01)
+        minPrice = myarray.min() - (myarray.min() * .01)
+        plt.plot(myarray)
+        plt.xlabel('Days ago')
+        plt.ylabel('Closing Price')
+        plt.axis((9, 0, minPrice, maxPrice))
+        plt.title(f"{ticker} last 10 closing prices")
+        plt.show()
+    else:
+        print(f"Do not have 10 days of data. Only has {len(last10Days)} days.")
 
 
 # get all stock info
