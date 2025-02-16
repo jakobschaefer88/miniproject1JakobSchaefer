@@ -44,14 +44,6 @@ for ticker in myTickers:
         plt.ylabel('Closing Price')
         plt.axis((9, 0, minPrice, maxPrice))
         plt.title(f"{ticker} last 10 closing prices")
-        plt.show()
+        plt.savefig(f"charts/{ticker}.png")
     else:
         print(f"Do not have 10 days of data. Only has {len(last10Days)} days.")
-
-
-# get all stock info
-#pprint.pprint(wmt.info)
-
-# get historical market data
-#hist = msft.history(period="1mo")
-#pprint.pprint(hist)
